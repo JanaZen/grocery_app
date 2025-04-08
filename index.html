@@ -1,41 +1,46 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nákupní seznam</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Nákupní seznam</h1>
     <form id="groceryForm">
-        <div>
+        <div class="wholelist">
             <input type="checkbox" id="item1">
-            <label for="item1">Jablička</label>
+            <label for="item1">JABLKA</label>
             <input type="number" id="qty1" min="0" value="0">
         </div>
-        <div>
+        <div class="wholelist">
             <input type="checkbox" id="item2">
-            <label for="item2">Banány</label>
+            <label for="item2">BANÁNY</label>
             <input type="number" id="qty2" min="0" value="0">
         </div>
-        <div>
+        <div class="wholelist">
             <input type="checkbox" id="item3">
-            <label for="item3">Chléb</label>
+            <label for="item3">CHLEBA</label>
             <input type="number" id="qty3" min="0" value="0">
         </div>
+        <br>
         <button type="button" onclick="exportList()">Exportovat nákupní seznam</button>
+        <button type="button" onclick="copyToClipboard()">Kopírovat do schránky</button>
     </form>
 
-    <h2>Seznam nákupů:</h2>
+    <h2>Finální seznam:</h2>
     <pre id="output"></pre>
 
     <script>
+        let lastOutput = ""; 
+
         function exportList() {
             const output = [];
             const items = [
-                { id: 'item1', qty: 'qty1', name: 'Jablička' },
+                { id: 'item1', qty: 'qty1', name: 'Jablka' },
                 { id: 'item2', qty: 'qty2', name: 'Banány' },
-                { id: 'item3', qty: 'qty3', name: 'Chléb' },
+                { id: 'item3', qty: 'qty3', name: 'Chleba' },
             ];
 
             items.forEach(item => {
@@ -46,7 +51,20 @@
                 }
             });
 
-            document.getElementById('output').innerText = output.length ? output.join('\n') : 'Žádné položky nebyly vybrány.';
+            lastOutput = output.length ? output.join('\n') : 'Žádné položky nebyly vybrány.'; 
+            document.getElementById('output').innerText = lastOutput;
+        }
+
+        function copyToClipboard() {
+            if (lastOutput && lastOutput !== 'Žádné položky nebyly vybrány.') {
+                navigator.clipboard.writeText(lastOutput).then(() => {
+                    alert('Seznam byl zkopírován do schránky!');
+                }, () => {
+                    alert('Nepodařilo se zkopírovat do schránky.');
+                });
+            } else {
+                alert('Žádné položky k zkopírování.');
+            }
         }
     </script>
 </body>
