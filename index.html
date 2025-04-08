@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nákupní seznam</title>
+</head>
+<body>
+    <h1>Nákupní seznam</h1>
+    <form id="groceryForm">
+        <div>
+            <input type="checkbox" id="item1">
+            <label for="item1">Jablička</label>
+            <input type="number" id="qty1" min="0" value="0">
+        </div>
+        <div>
+            <input type="checkbox" id="item2">
+            <label for="item2">Banány</label>
+            <input type="number" id="qty2" min="0" value="0">
+        </div>
+        <div>
+            <input type="checkbox" id="item3">
+            <label for="item3">Chléb</label>
+            <input type="number" id="qty3" min="0" value="0">
+        </div>
+        <button type="button" onclick="exportList()">Exportovat nákupní seznam</button>
+    </form>
+
+    <h2>Seznam nákupů:</h2>
+    <pre id="output"></pre>
+
+    <script>
+        function exportList() {
+            const output = [];
+            const items = [
+                { id: 'item1', qty: 'qty1', name: 'Jablička' },
+                { id: 'item2', qty: 'qty2', name: 'Banány' },
+                { id: 'item3', qty: 'qty3', name: 'Chléb' },
+            ];
+
+            items.forEach(item => {
+                const checkbox = document.getElementById(item.id);
+                const quantity = document.getElementById(item.qty).value;
+                if (checkbox.checked && quantity > 0) {
+                    output.push(`${item.name}: ${quantity}`);
+                }
+            });
+
+            document.getElementById('output').innerText = output.length ? output.join('\n') : 'Žádné položky nebyly vybrány.';
+        }
+    </script>
+</body>
+</html>
