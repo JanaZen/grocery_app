@@ -1,34 +1,35 @@
 body {
 
-    background: linear-gradient(#6F58C9,#C1BDB3 );
+    background: linear-gradient(#7F9183,#B8B8AA,#586F6B );
     height: 850px;
 }
 
 h1 {
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #F49FBC;
-    font-size: 45px;
-    font-weight: 500;
+    color:#2e3a38;
+    font-size: 25px;
+    font-weight: 400;
 }
 
-h2 {
-
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #2E1F27;
-    font-size: 40px;
-    font-weight: 200;
-}
 
 .wholelist {
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
     font-weight: 400;
-    color: #BBDBD1;
+    color: #c8e9df;
      
 }
 
 input[type="number"] {
     width: 40px;
+}
+
+img  {
+
+    height: 150px;
+    width: auto;
+    position: sticky;
+    left: 20px;
 }
