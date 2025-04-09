@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nákupní seznam</title>
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
+
 </head>
 <body>
     <h1>NÁKUP</h1>
@@ -55,8 +57,9 @@
             <input type="number" id="qty9" min="0" value="0">
         </div>
         <br>
-        <button type="button" onclick="exportList()">Exportovat nákupní seznam</button>
-        <button type="button" onclick="copyToClipboard()">Kopírovat do schránky</button>
+        <button type="button" onclick="exportList()">Exportuj seznam</button>
+        <button type="button" onclick="copyToClipboard()">Kopíruj do schránky</button>
+        <button type="button" onclick="shareList()">Sdílej</button>
     </form>
 
     <h2>Finální seznam:</h2>
