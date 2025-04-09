@@ -8,9 +8,9 @@
     <script src="seznam.js" defer></script>
 </head>
 <body>
-   
 
-    <pre id="sharedList"></pre>
+
+    <form id="itemListForm"></form>
 
     <script>
         function getQueryParameter(name) {
@@ -18,9 +18,43 @@
             return urlParams.get(name);
         }
 
+        function setupCheckboxes(items) {
+            const form = document.getElementById('itemListForm');
+            items.forEach(item => {
+                const div = document.createElement('div');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = item.name;
+                const label = document.createElement('label');
+                label.htmlFor = item.name;
+                label.textContent = item.text;
+
+                // Přidání události pro zaškrtnutí
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        label.classList.add('crossed'); // Přidej třídu při zaškrtnutí
+                    } else {
+                        label.classList.remove('crossed'); // Odstraň třídu při zrušení
+                    }
+                });
+
+                div.appendChild(checkbox);
+                div.appendChild(label);
+                form.appendChild(div);
+            });
+        }
+
         window.onload = function() {
             const list = getQueryParameter('list');
-            document.getElementById('sharedList').innerText = list ? decodeURIComponent(list) : 'Žádný seznam nebyl nalezen.';
+            if (list) {
+                const items = decodeURIComponent(list).split('\n').map(line => {
+                    const [text, quantity] = line.split(': ');
+                    return { text: `${text} (${quantity})`, name: text.replace(/\s+/g, '') }; // Použij jméno bez mezer pro ID
+                });
+                setupCheckboxes(items);
+            } else {
+                document.getElementById('itemListForm').innerText = 'Žádný seznam nebyl nalezen.';
+            }
         }
     </script>
 </body>

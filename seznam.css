@@ -2,3 +2,8 @@ body {
 
     background: linear-gradient(#6F58C9,#C1BDB3 )
 }
+
+
+.crossed {
+    text-decoration: line-through;
+}
