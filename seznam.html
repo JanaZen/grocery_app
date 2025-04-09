@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERE IT IS</title>
+    <link rel="stylesheet" href="seznam.css">
+    <script src="seznam.js" defer></script>
+</head>
+<body>
+   
+
+    <pre id="sharedList"></pre>
+
+    <script>
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        window.onload = function() {
+            const list = getQueryParameter('list');
+            document.getElementById('sharedList').innerText = list ? decodeURIComponent(list) : 'Žádný seznam nebyl nalezen.';
+        }
+    </script>
+</body>
+</html>
