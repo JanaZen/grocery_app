@@ -1,6 +1,7 @@
 body {
 
-    background: linear-gradient(#6F58C9,#C1BDB3 )
+    background: linear-gradient(#6F58C9,#C1BDB3 );
+    height: 850px;
 }
 
 h1 {
@@ -26,4 +27,8 @@ h2 {
     font-weight: 400;
     color: #BBDBD1;
      
+}
+
+input[type="number"] {
+    width: 40px;
 }
