@@ -34,7 +34,7 @@ function exportList() {
         { id: 'item5', qty: 'qty5', name: 'Jablka' },
         { id: 'item6', qty: 'qty6', name: 'Hrušky' },
         { id: 'item7', qty: 'qty7', name: 'Pomeranče' },
-        { id: 'item8', qty: 'qty8', name: 'Mandaninky' },
+        { id: 'item8', qty: 'qty8', name: 'Mandarinky' },
         { id: 'item9', qty: 'qty9', name: 'Blumy' },
         { id: 'item10', qty: 'qty10', name: 'Citrony' },
         { id: 'item11', qty: 'qty11', name: 'Banány' },

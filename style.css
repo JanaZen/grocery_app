@@ -2,9 +2,9 @@
 .container {
   
     display:grid;
-    height: 160vh;
+    height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 2fr;
+    grid-template-rows: 0.1fr 2.8fr 0.2fr;
     grid-template-areas:
       "nav nav nav"
       "content1 content2 content3"
@@ -14,26 +14,25 @@
   }
 
   .food-list {
-    max-height: 550px; /* Set a height for your food list */
+    max-height: 450px; /* Set a height for your food list */
     overflow-y: auto;  /* Enables vertical scrolling within the list */
     margin-right: 20px; /* Space between the food list and the scrollbar */
     padding: 10px; /* Optional: Adds some padding */
     
 }
 
-.scrollable-list {
-    width: 20px; /* Width for the scrollbar area */
-    height: 550px; /* Match height of food list */
-    margin-left: 20px; /* Space on the left side */
-}
+
  
 
 button {
 
-      background-color: linear-gradient(#7F9183,#B8B8AA,#586F6B );
+      background-color:#7F9183;
       border-radius: 10px;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
       
     }
   
@@ -44,14 +43,15 @@ body {
   }
   
 nav {
-    
-    background: #399383;
+    background-color:#6D5A72;
     grid-area: nav;
     font-size: 20px;
+    
    
     
      
       }
+    
  
 #content1 {
     
@@ -67,26 +67,38 @@ nav {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      top: 50px;
+      justify-content: flex-start;
   
       }
 
     h1 {
 
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      font-size: 40px;
-      font-weight: 400;
+      font-size: 30px;
+      font-weight: 450;
       color: #c8e9df;
       text-align: center;
+      grid-area: content2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      justify-content: flex-start;
+      padding-top: 5px;
 
     }
 
 img {
 
-  height: 150px;
+  height: 100px;
   grid-area: content2;
-  align-content: center;
- 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      justify-content: flex-start;
+      padding-top: 20px;
+  
 }
   
   #content3 {
@@ -100,7 +112,7 @@ img {
   .wholelist {
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     color: #c8e9df;
     text-align: center;
@@ -113,7 +125,7 @@ input[type="number"] {
 }
 
 footer {
-  background: #396D93;
+  background: #6D5A72;
   grid-area: footer;
   
     
