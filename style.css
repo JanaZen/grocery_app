@@ -1,35 +1,118 @@
+
+.container {
+  
+    display:grid;
+    height: 160vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 2fr;
+    grid-template-areas:
+      "nav nav nav"
+      "content1 content2 content3"
+      "footer footer footer";
+    grid-gap:0.2rem;
+
+  }
+
+  .food-list {
+    max-height: 550px; /* Set a height for your food list */
+    overflow-y: auto;  /* Enables vertical scrolling within the list */
+    margin-right: 20px; /* Space between the food list and the scrollbar */
+    padding: 10px; /* Optional: Adds some padding */
+    
+}
+
+.scrollable-list {
+    width: 20px; /* Width for the scrollbar area */
+    height: 550px; /* Match height of food list */
+    margin-left: 20px; /* Space on the left side */
+}
+ 
+
+button {
+
+      background-color: linear-gradient(#7F9183,#B8B8AA,#586F6B );
+      border-radius: 10px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      
+      
+    }
+  
 body {
-
+    
     background: linear-gradient(#7F9183,#B8B8AA,#586F6B );
-    height: 1550px;
-}
+    
+  }
+  
+nav {
+    
+    background: #399383;
+    grid-area: nav;
+   
+    
+     
+      }
+ 
+#content1 {
+    
+    grid-area: content1;
+    
+    }
+  
+  #content2 {
+    
+    
+      grid-area: content2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      }
 
-h1 {
+    h1 {
+
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      color: #c8e9df;
+      text-align: center;
+
+    }
+
+img {
+
+  height: 150px;
+  grid-area: content2;
+  align-content: center;
+ 
+}
+  
+  #content3 {
+    
+    grid-area: content3;
+      
+    }
+  
+
+
+  .wholelist {
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color:#2e3a38;
-    font-size: 25px;
-    font-weight: 400;
-}
-
-
-.wholelist {
-
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 400;
     color: #c8e9df;
+    text-align: center;
+   
      
 }
 
 input[type="number"] {
-    width: 40px;
+  width: 40px;
 }
 
-img  {
-
-    height: 150px;
-    width: auto;
-    position: sticky;
-    left: 20px;
+footer {
+  background: #396D93;
+  grid-area: footer;
+  
+    
 }

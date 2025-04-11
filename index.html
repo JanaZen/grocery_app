@@ -3,225 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nákupní seznam</title>
+    <title>responsiff</title>
     <link rel="stylesheet" href="style.css">
-    <script src="javascript.js" defer></script>
-
 </head>
 <body>
 
-    <img src="images/main_picture.png" alt="logo zeleniny a ovoce">
-    <br>
-    <h1>Vyber ze seznamu:</h1>
-    <form id="groceryForm">
-        <div class="wholelist">
-            <input type="checkbox" id="item1">
-            <label for="item1">Rohlíky</label>
-            <input type="number" id="qty1" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item2">
-            <label for="item2">Croissant</label>
-            <input type="number" id="qty2" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item3">
-            <label for="item3">Chleba</label>
-            <input type="number" id="qty3" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item4">
-            <label for="item4">Celzn.bageta</label>
-            <input type="number" id="qty4" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item5">
-            <label for="item5">Jablka</label>
-            <input type="number" id="qty5" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item6">
-            <label for="item6">Hrušky</label>
-            <input type="number" id="qty6" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item7">
-            <label for="item7">Pomeranče</label>
-            <input type="number" id="qty7" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item8">
-            <label for="item8">Mandaninky</label>
-            <input type="number" id="qty8" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item9">
-            <label for="item9">Blumy</label>
-            <input type="number" id="qty9" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item10">
-            <label for="item10">Citrony</label>
-            <input type="number" id="qty10" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item11">
-            <label for="item11">Banány</label>
-            <input type="number" id="qty11" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item12">
-            <label for="item12">Pórek</label>
-            <input type="number" id="qty12" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item13">
-            <label for="item13">Mrkev</label>
-            <input type="number" id="qty13" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item14">
-            <label for="item14">Petržel</label>
-            <input type="number" id="qty14" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item15">
-            <label for="item15">Cibule</label>
-            <input type="number" id="qty15" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item16">
-            <label for="item16">Brambory</label>
-            <input type="number" id="qty16" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item17">
-            <label for="item17">Ledový salát</label>
-            <input type="number" id="qty17" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item18">
-            <label for="item18">Kysané zelí</label>
-            <input type="number" id="qty18" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item19">
-            <label for="item19">Kyselé okurky</label>
-            <input type="number" id="qty19" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item20">
-            <label for="item20">Cereálie</label>
-            <input type="number" id="qty20" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item21">
-            <label for="item21">Kešu</label>
-            <input type="number" id="qty21" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item22">
-            <label for="item22">Mandle</label>
-            <input type="number" id="qty22" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item23">
-            <label for="item23">Buráky</label>
-            <input type="number" id="qty23" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item24">
-            <label for="item24">Sušenky</label>
-            <input type="number" id="qty24" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item25">
-            <label for="item25">Maso</label>
-            <input type="number" id="qty25" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item26">
-            <label for="item26">Šunku</label>
-            <input type="number" id="qty26" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item27">
-            <label for="item27">Párky</label>
-            <input type="number" id="qty27" min="0">
-        </div>
-        <div class="wholelist">
-            <input type="checkbox" id="item28">
-            <label for="item28">Klobásky</label>
-            <input type="number" id="qty28" min="0">
-        </div>
-        <br>
-        <button type="button" onclick="exportList()">Exportuj seznam</button>
-        <button type="button" onclick="copyToClipboard()">Kopíruj do schránky</button>
+  <div class="container">
+        <nav>Navbar</nav>
+
+        <div id="content1">Content1</div>
         
-    </form>
+        <div id="content2">
+            <img src="images/main_picture.png" class="wholelist" alt="ovoce a zelenina">
+            <br>
+            <h1>Vyber potraviny ze seznamu</h1>
 
-    <pre id="output"></pre>
+            <br>
 
-    <script>
-        let lastOutput = ""; 
+           
+            <form id="groceryForm">
+                <div class="flex-container">
 
-        function exportList() {
-            const output = [];
-            const items = [
-                { id: 'item1', qty: 'qty1', name: 'Rohlíky' },
-                { id: 'item2', qty: 'qty2', name: 'Croissant' },
-                { id: 'item3', qty: 'qty3', name: 'Chleba' },
-                { id: 'item4', qty: 'qty4', name: 'Celzn.bageta' },
-                { id: 'item5', qty: 'qty5', name: 'Jablka' },
-                { id: 'item6', qty: 'qty6', name: 'Hrušky' },
-                { id: 'item7', qty: 'qty7', name: 'Pomeranče' },
-                { id: 'item8', qty: 'qty8', name: 'Mandaninky' },
-                { id: 'item9', qty: 'qty9', name: 'Blumy' },
-                { id: 'item10', qty: 'qty10', name: 'Citrony' },
-                { id: 'item11', qty: 'qty11', name: 'Banány' },
-                { id: 'item12', qty: 'qty12', name: 'Pórek' },
-                { id: 'item13', qty: 'qty13', name: 'Mrkev' },
-                { id: 'item14', qty: 'qty14', name: 'Petržel' },
-                { id: 'item15', qty: 'qty15', name: 'Cibule' },
-                { id: 'item16', qty: 'qty16', name: 'Brambory' },
-                { id: 'item17', qty: 'qty17', name: 'Ledový salát' },
-                { id: 'item18', qty: 'qty18', name: 'Kysané zelí' },
-                { id: 'item19', qty: 'qty19', name: 'Kyselé okurky' },
-                { id: 'item20', qty: 'qty20', name: 'Cereálie' },
-                { id: 'item21', qty: 'qty21', name: 'Kešu' },
-                { id: 'item22', qty: 'qty22', name: 'Mandle' },
-                { id: 'item23', qty: 'qty23', name: 'Buráky' },
-                { id: 'item24', qty: 'qty24', name: 'Sušenky' },
-                { id: 'item25', qty: 'qty25', name: 'Maso' },
-                { id: 'item26', qty: 'qty26', name: 'Šunku' },
-                { id: 'item27', qty: 'qty27', name: 'Párky' },
-                { id: 'item28', qty: 'qty28', name: 'Klobásky' },
+                  <div class="food-list">
+                  <div class="wholelist">
+                    <input type="checkbox" id="item1">
+                    <label for="item1">Rohlíky</label>
+                    <input type="number" id="qty1" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item2">
+                    <label for="item2">Croissant</label>
+                    <input type="number" id="qty2" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item3">
+                    <label for="item3">Chleba</label>
+                    <input type="number" id="qty3" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item4">
+                    <label for="item4">Celzn.bageta</label>
+                    <input type="number" id="qty4" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item5">
+                    <label for="item5">Jablka</label>
+                    <input type="number" id="qty5" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item6">
+                    <label for="item6">Hrušky</label>
+                    <input type="number" id="qty6" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item7">
+                    <label for="item7">Pomeranče</label>
+                    <input type="number" id="qty7" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item8">
+                    <label for="item8">Mandaninky</label>
+                    <input type="number" id="qty8" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item9">
+                    <label for="item9">Blumy</label>
+                    <input type="number" id="qty9" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item10">
+                    <label for="item10">Citrony</label>
+                    <input type="number" id="qty10" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item11">
+                    <label for="item11">Banány</label>
+                    <input type="number" id="qty11" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item12">
+                    <label for="item12">Pórek</label>
+                    <input type="number" id="qty12" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item13">
+                    <label for="item13">Mrkev</label>
+                    <input type="number" id="qty13" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item14">
+                    <label for="item14">Petržel</label>
+                    <input type="number" id="qty14" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item15">
+                    <label for="item15">Cibule</label>
+                    <input type="number" id="qty15" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item16">
+                    <label for="item16">Brambory</label>
+                    <input type="number" id="qty16" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item17">
+                    <label for="item17">Ledový salát</label>
+                    <input type="number" id="qty17" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item18">
+                    <label for="item18">Kysané zelí</label>
+                    <input type="number" id="qty18" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item19">
+                    <label for="item19">Kyselé okurky</label>
+                    <input type="number" id="qty19" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item20">
+                    <label for="item20">Cereálie</label>
+                    <input type="number" id="qty20" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item21">
+                    <label for="item21">Kešu</label>
+                    <input type="number" id="qty21" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item22">
+                    <label for="item22">Mandle</label>
+                    <input type="number" id="qty22" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item23">
+                    <label for="item23">Buráky</label>
+                    <input type="number" id="qty23" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item24">
+                    <label for="item24">Sušenky</label>
+                    <input type="number" id="qty24" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item25">
+                    <label for="item25">Maso</label>
+                    <input type="number" id="qty25" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item26">
+                    <label for="item26">Šunku</label>
+                    <input type="number" id="qty26" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item27">
+                    <label for="item27">Párky</label>
+                    <input type="number" id="qty27" min="0">
+                </div>
+                <div class="wholelist">
+                    <input type="checkbox" id="item28">
+                    <label for="item28">Klobásky</label>
+                    <input type="number" id="qty28" min="0">
+                </div>
                 
-            ];
+                
+                <br>
+                <div class="wholelist">
+                    <button type="button" onclick="exportList()">Exportuj seznam</button>
+                <br>
+                <button type="button" onclick="copyToClipboard()">Kopíruj do schránky</button>
+                </div>
 
-            items.forEach(item => {
-                const checkbox = document.getElementById(item.id);
-                const quantity = document.getElementById(item.qty).value;
-                if (checkbox.checked && quantity > 0) {
-                    output.push(`${item.name}: ${quantity}`);
+            </div>
+            <div class="scrollable-list">
+                <!-- Content for the scrollbar goes here, if desired -->
+            </div>
+        </div>
+                
+                
+            </form>
+        
+            <pre id="output"></pre>
+        
+            <script>
+                let lastOutput = ""; 
+        
+                function exportList() {
+                    const output = [];
+                    const items = [
+                        { id: 'item1', qty: 'qty1', name: 'Rohlíky' },
+                        { id: 'item2', qty: 'qty2', name: 'Croissant' },
+                        { id: 'item3', qty: 'qty3', name: 'Chleba' },
+                        { id: 'item4', qty: 'qty4', name: 'Celzn.bageta' },
+                        { id: 'item5', qty: 'qty5', name: 'Jablka' },
+                        { id: 'item6', qty: 'qty6', name: 'Hrušky' },
+                        { id: 'item7', qty: 'qty7', name: 'Pomeranče' },
+                        { id: 'item8', qty: 'qty8', name: 'Mandaninky' },
+                        { id: 'item9', qty: 'qty9', name: 'Blumy' },
+                        { id: 'item10', qty: 'qty10', name: 'Citrony' },
+                        { id: 'item11', qty: 'qty11', name: 'Banány' },
+                        { id: 'item12', qty: 'qty12', name: 'Pórek' },
+                        { id: 'item13', qty: 'qty13', name: 'Mrkev' },
+                        { id: 'item14', qty: 'qty14', name: 'Petržel' },
+                        { id: 'item15', qty: 'qty15', name: 'Cibule' },
+                        { id: 'item16', qty: 'qty16', name: 'Brambory' },
+                        { id: 'item17', qty: 'qty17', name: 'Ledový salát' },
+                        { id: 'item18', qty: 'qty18', name: 'Kysané zelí' },
+                        { id: 'item19', qty: 'qty19', name: 'Kyselé okurky' },
+                        { id: 'item20', qty: 'qty20', name: 'Cereálie' },
+                        { id: 'item21', qty: 'qty21', name: 'Kešu' },
+                        { id: 'item22', qty: 'qty22', name: 'Mandle' },
+                        { id: 'item23', qty: 'qty23', name: 'Buráky' },
+                        { id: 'item24', qty: 'qty24', name: 'Sušenky' },
+                        { id: 'item25', qty: 'qty25', name: 'Maso' },
+                        { id: 'item26', qty: 'qty26', name: 'Šunku' },
+                        { id: 'item27', qty: 'qty27', name: 'Párky' },
+                        { id: 'item28', qty: 'qty28', name: 'Klobásky' },
+                        
+                    ];
+        
+                    items.forEach(item => {
+                        const checkbox = document.getElementById(item.id);
+                        const quantity = document.getElementById(item.qty).value;
+                        if (checkbox.checked && quantity > 0) {
+                            output.push(`${item.name}: ${quantity}`);
+                        }
+                    });
+        
+                    lastOutput = output.length ? output.join('\n') : 'Žádné položky nebyly vybrány.'; 
+                    document.getElementById('output').innerText = lastOutput;
                 }
-            });
-
-            lastOutput = output.length ? output.join('\n') : 'Žádné položky nebyly vybrány.'; 
-            document.getElementById('output').innerText = lastOutput;
-        }
-
-        function copyToClipboard() {
-            if (lastOutput && lastOutput !== 'Žádné položky nebyly vybrány.') {
-                navigator.clipboard.writeText(lastOutput).then(() => {
-                    alert('Seznam byl zkopírován do schránky!');
-                }, () => {
-                    alert('Nepodařilo se zkopírovat do schránky.');
-                });
-            } else {
-                alert('Žádné položky k zkopírování.');
-            }
-        }
-    </script>
+        
+                function copyToClipboard() {
+                    if (lastOutput && lastOutput !== 'Žádné položky nebyly vybrány.') {
+                        navigator.clipboard.writeText(lastOutput).then(() => {
+                            alert('Seznam byl zkopírován do schránky!');
+                        }, () => {
+                            alert('Nepodařilo se zkopírovat do schránky.');
+                        });
+                    } else {
+                        alert('Žádné položky k zkopírování.');
+                    }
+                }
+            </script>
+        </div>
+        
+        <div id="content3">Content3</div>
+        <footer>Footer</footer>
+      </div>
+    
 </body>
 </html>
