@@ -1,3 +1,11 @@
+:root {
+
+  --main-radius:5px;
+  --main-padding:5px;
+
+}
+
+
 
 .container {
   
@@ -46,11 +54,11 @@ nav {
     background-color:#6D5A72;
     grid-area: nav;
     font-size: 20px;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
     
-   
     
-     
-      }
+     }
     
  
 #content1 {
@@ -68,6 +76,8 @@ nav {
       align-items: center;
       justify-content: center;
       justify-content: flex-start;
+      border-radius: var(--main-radius);
+      padding-top: var(--main-padding);
   
       }
 
@@ -127,6 +137,28 @@ input[type="number"] {
 footer {
   background: #6D5A72;
   grid-area: footer;
-  
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
     
 }
+
+
+
+@media only screen and (max-width: 550px) {
+
+  .container {
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3.5fr 0.5fr;
+    grid-template-areas:
+    "nav"
+    "content2"
+    "footer"
+  }
+
+  .wholelist {
+
+    font-size: 20px;
+  }
+}
+
